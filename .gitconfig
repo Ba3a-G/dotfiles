@@ -1,3 +1,8 @@
 [user]
 	name = Aryan Kumar
 	email = aryan.ak434@gmail.com
+[http]
+	postBuffer = 1048576000
+	maxRequestBuffer = 100M
+[init]
+	defaultBranch = master

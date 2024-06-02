@@ -124,6 +124,7 @@ alias llogin="~/.apps/llogin.sh --account 12218679"
 alias fuckoff="shutdown now"
 alias pls="~/.apps/pls.sh"
 alias tb="~/.apps/toggleBlur.sh"
+alias wifi="nmcli dev wifi"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -141,4 +142,7 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+eval "$(zoxide init zsh)"
+
 source ~/.lpu_creds
