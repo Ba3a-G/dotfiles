@@ -1,4 +1,5 @@
 fastfetch
+echo "--- To Dos ---"
 todo list
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -126,6 +127,7 @@ alias fuckoff="shutdown now"
 alias pls="~/.apps/pls.sh"
 alias tb="~/.apps/toggleBlur.sh"
 alias wifi="nmcli dev wifi"
+alias tn="ts-node"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -147,3 +149,4 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 eval "$(zoxide init zsh)"
 
 source ~/.lpu_creds
+export PATH=$HOME/.local/bin:$PATH
