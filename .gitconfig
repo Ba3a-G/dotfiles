@@ -1,0 +1,11 @@
+# This is Git's per-user configuration file.
+[user]
+	signingkey = /Users/ba3a/.ssh/id_mac.pub
+	email = mail@ba3a.tech
+	name = Aryan
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true
+[gpg "ssh"]
+	allowedSignersFile = ~/.config/git/allowed_signers
