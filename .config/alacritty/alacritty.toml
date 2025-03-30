@@ -1,0 +1,67 @@
+general.import = [
+  # uncomment the flavour you want below:
+  #"~/.config/alacritty/catppuccin-latte.toml"
+  # "~/.config/alacritty/catppuccin-frappe.toml"
+  # "~/.config/alacritty/catppuccin-macchiato.toml"
+  "~/.config/alacritty/catppuccin-mocha.toml"
+]
+
+general.live_config_reload = true
+
+[bell]
+animation = "EaseOutExpo"
+duration = 0
+
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 12
+
+[font.bold]
+family = "Mononoki Nerd Font"
+style = "Bold"
+
+[font.glyph_offset]
+x = 0
+y = 0
+
+[font.italic]
+family = "Mononoki Nerd Font"
+
+[font.normal]
+family = "Mononoki Nerd Font"
+style = "Regular"
+
+[font.offset]
+x = 0
+y = 0
+
+[mouse]
+hide_when_typing = true
+bindings = [
+    { mouse = "Right", mods = "Alt", action = "ToggleMaximized" }
+]
+
+[selection]
+semantic_escape_chars = ",│`|:\"' ()[]{}<>"
+
+[window]
+dynamic_title = true
+option_as_alt = "Both"
+opacity = 1
+
+[window.dimensions]
+columns = 120
+lines = 60
+
+[window.padding]
+x = 20
+y = 20
+
+[cursor]
+style = "Beam"
+
