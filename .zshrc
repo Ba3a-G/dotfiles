@@ -1,4 +1,7 @@
-fastfetch
+# if [ "$TERM_PROGRAM" = "kitty" ]
+# then
+#   fastfetch
+# fi
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -6,7 +9,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-HISTSIZE=2000
+HISTSIZE=1000
 HISTFILE=~/.zsh_history
 SAVEHIST=$HISTSIZE
 HISTDUP=erase
@@ -138,13 +141,19 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias vim="nvim"
+# alias docker="container"
+alias dps="container ls"
 
 # Replace some more things with better alternatives
 alias cat='bat --style header --style snip --style changes --style header'
-[ ! -x /usr/bin/yay ] && [ -x /usr/bin/paru ] && alias yay='paru'
 
 alias fuckoff="sudo shutdown -h now"
 alias pls="~/.apps/pls.sh"
+alias timeout="gtimeout"
+alias disablesleep="sudo pmset disablesleep 1"
+alias enablesleep="sudo pmset disablesleep 0"
+# since there's no redis-cli standalone package, we use docker
+alias redis-cli="docker run --rm -it redis:alpine redis-cli"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -157,8 +166,6 @@ fpath+=${ZDOTDIR:-~}/.zsh_functions
 
 eval "$(zoxide init zsh)"
 
-eval $(thefuck --alias)
-
 export PATH=$HOME/.local/bin:$PATH
 export FPATH="~/.config/eza-completions/zsh:$FPATH"
 
@@ -169,3 +176,18 @@ export FPATH="~/.config/eza-completions/zsh:$FPATH"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
+export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"
+export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"
+
+# pnpm
+export PNPM_HOME="/Users/ba3a/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export PATH=$PATH:$HOME/go/bin
+
+# Added by Antigravity
+export PATH="/Users/ba3a/.antigravity/antigravity/bin:$PATH"
